@@ -1,0 +1,29 @@
+<article class="post">
+  <header>
+    <h2><%= article.title %></h2>
+    <span class="date"><%= article.date %></span>
+  </header>
+
+  <section class="content">
+    <%= article.body %>
+  </section>
+  <hr>
+  <section class="navigator">
+    <% if article.right %>
+    <p>上一篇：<a href="<%= article.right.path %>"><%= article.right.title %></a></p>
+    <% end %>
+    <% if article.left %>
+    <p>下一篇：<a href="<%= article.left.path %>"><%= article.left.title %></a></p>
+    <% end %>
+  </section>
+
+  <section class="comments">
+    <% if @config[:disqus] %>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="http://disqus.com/forums/<%= @config[:disqus] %>/embed.js"> </script>
+      <noscript><a href="http://<%= @config[:disqus] %>.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    <% end %>
+  </section>
+</article>
+
