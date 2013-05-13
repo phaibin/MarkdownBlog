@@ -1,8 +1,8 @@
 source "http://ruby.taobao.org"
 
 gem 'rdiscount'
-gem 'sinatra'
-gem 'shotgun'
+gem 'sinatra', '~> 1.4.0'
+gem 'sinatra-contrib'
 gem 'thin'
 gem 'tilt'
 gem 'builder'

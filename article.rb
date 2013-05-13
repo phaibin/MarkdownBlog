@@ -10,7 +10,6 @@ class Article
 
   class << self
     def load(dir, ext="md")
-      puts "Article load"
       @articles ||= {}
       Dir.glob("#{dir}/**/*.#{ext}").each do |file|
         article = Article.new(file)
@@ -48,10 +47,6 @@ class Article
     class_eval "def #{m};@options['#{m}'];end"
   end
 
-  def [](key)
-    @options[key.to_s]
-  end
-
   def slug
     File.basename(@file_path, ".*")
   end
@@ -61,11 +56,11 @@ class Article
   end
 
   def body
-    Tilt::RDiscountTemplate.new{ content }.render
+    Tilt::RDiscountTemplate.new{ content }.render.force_encoding('utf-8')
   end
 
   def summary
-    Tilt::RDiscountTemplate.new{ content[0..150] }.render
+    Tilt::RDiscountTemplate.new{ content[0..150] }.render.force_encoding('utf-8')
   end
 
   def path
@@ -75,10 +70,6 @@ class Article
     else
       "/#{date.strftime("%Y/%m/%d")}/#{slug}"
     end
-  end
-
-  def to_hash
-    Hash[%w(title date author body).map{ |key| [key.intern, self.send(key)] }]
   end
 
   def url
