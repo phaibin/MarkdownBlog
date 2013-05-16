@@ -16,10 +16,10 @@ class Article
         @articles[article.slug] = article
       end
 
-      all_articles = @articles.values
-      all_articles.sort.each_with_index do |article, index|
-        article.left = all_articles[index-1] if index>0
-        article.right = all_articles[index+1] if index<all_articles.count-1
+      all_articles = @articles.values.sort
+      all_articles.each_with_index do |a, index|
+        a.left = all_articles[index-1] if index>0
+        a.right = all_articles[index+1] if index<all_articles.count-1
       end
     end
 

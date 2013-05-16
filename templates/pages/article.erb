@@ -9,11 +9,11 @@
   </section>
   <hr>
   <section class="navigator">
-    <% if article.right %>
-    <p>上一篇：<a href="<%= article.right.path %>"><%= article.right.title %></a></p>
-    <% end %>
     <% if article.left %>
-    <p>下一篇：<a href="<%= article.left.path %>"><%= article.left.title %></a></p>
+    <p>上一篇：<a href="<%= article.left.path %>"><%= article.left.title %></a></p>
+    <% end %>
+    <% if article.right %>
+    <p>下一篇：<a href="<%= article.right.path %>"><%= article.right.title %></a></p>
     <% end %>
   </section>
 
