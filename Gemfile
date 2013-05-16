@@ -6,5 +6,5 @@ gem 'sinatra-contrib'
 gem 'thin'
 gem 'tilt'
 gem 'builder'
-
+gem 'shotgun'
 

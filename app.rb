@@ -1,11 +1,12 @@
 require 'builder'
 require 'sinatra/base'
-require 'sinatra/reloader'
-require './article'
+require './lib/article'
 
 class MyApp < Sinatra::Base
-  configure :development do
+  configure :development do |c|
+    require 'sinatra/reloader'
     register Sinatra::Reloader
+    c.also_reload File.dirname(__FILE__)+"/lib/*.rb"
   end
 
   configure do
@@ -59,6 +60,13 @@ class MyApp < Sinatra::Base
 
   get "/about" do
     erb :"pages/about", :locals => { 
+      :site_title => settings.site_title,
+      :title => settings.site_title
+    }
+  end
+
+  not_found do
+    erb :"pages/404", :locals => { 
       :site_title => settings.site_title,
       :title => settings.site_title
     }

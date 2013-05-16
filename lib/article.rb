@@ -35,7 +35,6 @@ class Article
   def initialize(file_path)
     @file_path = file_path
 
-    # yaml = File.new(file_path).lines.take_while{ |line| !line.strip.empty? }
     yaml = File.read(file_path).split(/---/, 3)[1]
     @offset = yaml.length
 
@@ -60,16 +59,11 @@ class Article
   end
 
   def summary
-    Tilt::RDiscountTemplate.new{ content[0..150] }.render.force_encoding('utf-8')
+    Tilt::RDiscountTemplate.new{ content[0..160] }.render.force_encoding('utf-8')
   end
 
   def path
-    date = @options['date']
-    if slug.start_with? date.strftime("%F")
-      slug.split("-",4).join("/")
-    else
-      "/#{date.strftime("%Y/%m/%d")}/#{slug}"
-    end
+    '/' + slug.split("-",4).join("/")
   end
 
   def url

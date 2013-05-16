@@ -1,7 +1,4 @@
-require './lib/toto'
 require 'stringex'
-
-@config = Toto::Config::Defaults
 
 task :default => :new
 
@@ -16,7 +13,7 @@ task :new do
   article << "---\n"
   article << "Once upon a time...\n\n"
 
-  path = "#{Toto::Paths[:articles]}/#{Time.now.strftime("%Y-%m-%d")}#{'-' + slug if slug}.#{@config[:ext]}"
+  path = "#{File.dirname(__FILE__)}/articles/#{Time.now.strftime("%Y-%m-%d")}#{'-' + slug if slug}.md"
 
   unless File.exist? path
     File.open(path, "w") do |file|
