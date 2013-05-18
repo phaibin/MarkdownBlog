@@ -8,4 +8,23 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>1.虚拟目录：<br />Alias /movie &quot;/movie/&quot;<br />&lt;Directory &quot;/movie/&quot;&gt;<br />AllowOverride None<br />Options All<br />Order allow,deny<br />Allow from all<br />&lt;/Directory&gt;<br />2.查看服务器状态：<br />搜索到#ExtendedStatus On<br />去掉注释, 在下面添加:<br />&lt;Location /server-status&gt;<br />SetHandler server-status<br />Order deny,allow<br />Deny from all<br />Allow from 192.168.0.1<br />&lt;/Location&gt;<br />重启, 然后在浏览器输入/server-status</p><br /></p>
+1.虚拟目录：
+
+    Alias /movie "/movie/"
+    <Directory "/movie/">
+    AllowOverride None
+    Options All
+    Order allow,deny
+    Allow from all
+    </Directory>
+
+2.查看服务器状态：搜索到`#ExtendedStatus On`去掉注释, 在下面添加
+
+    <Location /server-status>
+    SetHandler server-status
+    Order deny,allow
+    Deny from all
+    Allow from 192.168.0.1
+    </Location>
+
+重启, 然后在浏览器输入/server-status

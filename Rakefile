@@ -19,20 +19,20 @@ task :new do
     File.open(path, "w") do |file|
       file.write article
     end
-    toto "an article was created for you at #{path}."
+    out "an article was created for you at #{path}."
   else
-    toto "I can't create the article, #{path} already exists."
+    out "I can't create the article, #{path} already exists."
   end
 end
 
 desc "Publish my blog."
 task :publish do
-  toto "publishing your article(s)..."
+  out "publishing your article(s)..."
   `git add .; git commit -am "new post"; git push heroku master; git push origin master`
 end
 
-def toto msg
-  puts "\n  toto ~ #{msg}\n\n"
+def out msg
+  puts "\n  MarkdownBlog ~ #{msg}\n\n"
 end
 
 def ask message

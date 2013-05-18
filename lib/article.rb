@@ -1,12 +1,13 @@
 require 'tilt'
 require 'yaml'
-require 'date'
+require 'time'
 
 class Article
 
   attr_accessor :file_path
   attr_accessor :left
   attr_accessor :right
+  attr_accessor :date
 
   class << self
     def load(dir, ext="md")
@@ -39,10 +40,10 @@ class Article
     @offset = yaml.length
 
     @options = YAML.load(yaml)
-    @options['date'] = Date.parse(@options['date'].gsub('/', '-')) rescue Date.today
+    @date = Time.parse(@options['date'].gsub('/', '-')) rescue Time.now
   end
 
-  %w(title date author).each do |m|
+  %w(title author).each do |m|
     class_eval "def #{m};@options['#{m}'];end"
   end
 
@@ -68,6 +69,10 @@ class Article
 
   def url
     path
+  end
+
+  def show_date
+    self.date.strftime("%Y-%m-%d")
   end
 
   private
