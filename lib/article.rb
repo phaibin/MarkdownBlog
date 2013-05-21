@@ -11,6 +11,7 @@ class Article
 
   class << self
     def load(dir, ext="md")
+      p "load"
       @articles ||= {}
       Dir.glob("#{dir}/**/*.#{ext}").each do |file|
         article = Article.new(file)
@@ -31,6 +32,10 @@ class Article
     def articles
       @articles.values.sort.reverse
     end
+
+    def find_by_tag(tag)
+      articles.select { |article| article.tags and article.tags.include? tag }
+    end
   end
 
   def initialize(file_path)
@@ -43,7 +48,7 @@ class Article
     @date = Time.parse(@options['date'].gsub('/', '-')) rescue Time.now
   end
 
-  %w(title author).each do |m|
+  %w(title author tags).each do |m|
     class_eval "def #{m};@options['#{m}'];end"
   end
 

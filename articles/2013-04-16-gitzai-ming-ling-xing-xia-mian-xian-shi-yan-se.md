@@ -4,6 +4,8 @@ title: "Git在命令行下面显示颜色"
 date: 2013-04-16 21:59
 comments: true
 categories: 
+tags:
+- git
 ---
 原文：<http://nathanhoad.net/how-to-colours-in-git>
 

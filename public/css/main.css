@@ -1,3 +1,5 @@
+@import url('http://fonts.googleapis.com/css?family=Arvo|Enriqueta|Gloria+Hallelujah');
+
 html { margin: 20px }
 body {
   margin: 0 auto;
@@ -141,3 +143,7 @@ article h2 {
 }
 .more a:hover { text-decoration: underline }
 section.navigator { font-size: 15px; }
+article > section.tag a {
+  font-family: 'Enriqueta';
+  color: #999;
+}

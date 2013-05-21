@@ -4,7 +4,8 @@ title: 解决新版apple developer上线之后在XCode刷新崩溃的问题
 date: 2013-04-09 18:40
 categories:
 - iphone
-tags: []
+tags:
+- xcode
 published: true
 comments: true
 ---

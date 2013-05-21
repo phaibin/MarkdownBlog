@@ -28,11 +28,21 @@ class MyApp < Sinatra::Base
   set :site_title => "海神"
   set :url => "http://phaibin.herokuapp.com"
   set :author => "文祥"
+  set :disqus => "phaibin"
 
   get '/' do
     erb :"pages/index", :locals => { 
       :site_title => settings.site_title,
       :title => settings.site_title
+    }
+  end
+
+  get '/tags/:tag' do |tag|
+    erb :"pages/tag", :locals => {
+      :title => settings.site_title, 
+      :site_title => settings.site_title,
+      tag: tag,
+      articles: Article.find_by_tag(tag)
     }
   end
 
@@ -50,12 +60,16 @@ class MyApp < Sinatra::Base
     erb :"pages/article", :locals => {
       :site_title => settings.site_title,
       :title => article.title,
-      article: article
+      article: article,
+      disqus: settings.disqus
     }
   end
 
   get "/archives" do
-    erb :"pages/archives", :locals => { :title => settings.site_title, :site_title => settings.site_title }
+    erb :"pages/archives", :locals => { 
+      :title => settings.site_title, 
+      :site_title => settings.site_title 
+    }
   end
 
   get "/about" do

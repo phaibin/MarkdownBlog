@@ -4,7 +4,9 @@ title: cucumber+watir在windows下的配置
 date: 2013-03-23 23:16
 categories:
 - RoR
-tags: []
+tags: 
+- cucumber
+- watir
 published: true
 comments: true
 ---

@@ -1,6 +1,8 @@
 ---
 title: 解决heroku不能提交代码的问题
 date: 2013-05-09 11:19
+tags:
+- heroku
 ---
 参考：<http://ruby-china.org/topics/10813>
 

@@ -1,0 +1,11 @@
+<h1><%= tag %></h1>
+<ul>
+  <% if articles.length > 0 %>
+    <% for entry in articles %>
+      <li>
+        <a href="<%= entry.path %>"><%= entry.title %></a>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+

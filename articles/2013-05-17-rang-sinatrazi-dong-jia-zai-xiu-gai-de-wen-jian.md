@@ -1,6 +1,9 @@
 ---
 title: 让Sinatra自动加载修改的文件
 date: 2013-05-17 07:46
+tags:
+- ruby
+- sinatra
 ---
 参考：<http://stackoverflow.com/questions/1247125/how-to-get-sinatra-to-auto-reload-the-file-after-each-change>
 
