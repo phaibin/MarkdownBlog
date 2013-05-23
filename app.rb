@@ -1,14 +1,10 @@
+# encoding: utf-8
+
 require 'builder'
 require 'sinatra/base'
 require './lib/article'
 
 class MyApp < Sinatra::Base
-  configure :development do |c|
-    require 'sinatra/reloader'
-    register Sinatra::Reloader
-    c.also_reload File.dirname(__FILE__)+"/lib/*.rb"
-  end
-
   configure do
     Article.load(File.dirname(__FILE__)+"/articles")
   end
