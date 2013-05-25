@@ -71,7 +71,7 @@ class Article
   end
 
   def summary
-    Tilt::RDiscountTemplate.new{ content[0..160] }.render.force_encoding('utf-8')
+    Tilt::RDiscountTemplate.new{ content.match(/(.{1,150}.*?)(\n|\Z)/m).to_s }.render.force_encoding('utf-8')
   end
 
   def path
