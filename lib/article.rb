@@ -8,6 +8,8 @@ class Article
   attr_accessor :left
   attr_accessor :right
   attr_accessor :date
+  attr_accessor :search_title
+  attr_accessor :search_summary
 
   class << self
     def load(dir, ext="md")
@@ -35,6 +37,10 @@ class Article
 
     def find_by_tag(tag)
       articles.select { |article| article.tags and article.tags.include? tag }
+    end
+
+    def search(keywords)
+      articles.select { |article| article.match keywords }
     end
   end
 
@@ -78,6 +84,23 @@ class Article
 
   def show_date
     self.date.strftime("%Y-%m-%d")
+  end
+
+  def match keywords
+    has_find = false
+    self.search_title = self.title
+    self.search_summary = self.summary
+    keywords.split.each do |keyword|
+      if self.title.downcase.include? keyword.downcase
+        has_find = true
+        self.search_title = self.search_title.gsub keyword, "<span class='search'>#{keyword}</span>"
+      end
+      if content.downcase.include? keyword.downcase
+        has_find = true
+
+      end
+    end
+    has_find
   end
 
   private

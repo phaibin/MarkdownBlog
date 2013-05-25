@@ -72,6 +72,15 @@ class MyApp < Sinatra::Base
     }
   end
 
+  get "/search" do
+    p params[:keyword]
+    erb :"pages/search", :locals => {
+      :title => settings.site_title, 
+      :site_title => settings.site_title,
+      articles: Article.search(params[:keyword])
+    }
+  end
+
   get "/about" do
     erb :"pages/about", :locals => { 
       :site_title => settings.site_title,

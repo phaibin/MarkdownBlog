@@ -1,0 +1,17 @@
+<p class="title">搜索到<%= articles.length %>处</p>
+<section id="articles">
+  <% for article in articles[0...20] %>
+    <article class="post">
+      <header>
+        <h2><a href="<%= article.path %>"><%= article.search_title %></a></h2>
+        <span class="date"><%= article.show_date %></span>
+      </header>
+
+      <section class="content">
+        <%= article.search_summary %>
+      </section>
+      <div class="more"><a href="<%= article.path %>">read on &raquo;</a></div>
+    </article>
+  <% end %>
+</section>
+

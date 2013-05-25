@@ -11,6 +11,8 @@ body {
 }
 h1, h2, h3, h4, h5, h6 { margin: 15px 0; }
 p { margin: 20px 0; }
+p.title { color: green; font-family: 'Gloria+Hallelujah'; }
+span.search { color: red; }
 header, footer, section, article {
 	display: block;
 }
@@ -81,11 +83,13 @@ body > header > h1 > a:hover {
 
 /*nav*/
 body > nav {
-  line-height: 10px;
+  line-height: 40px;
 }
 body > nav > ul {
-  line-height: 10px;
-  margin: 0px;
+
+}
+body > nav > form {
+  line-height: 35px;
 }
 
 /*footer*/
