@@ -9,6 +9,7 @@ class Article
   attr_accessor :right
   attr_accessor :date
   attr_accessor :search_title
+  attr_accessor :search_content
   attr_accessor :search_summary
 
   class << self
@@ -74,6 +75,14 @@ class Article
     Tilt::RDiscountTemplate.new{ content.match(/(.{1,150}.*?)(\n|\Z)/m).to_s }.render.force_encoding('utf-8')
   end
 
+  def search_summary
+    if self.search_content.length == 0
+      self.summary
+    else
+      Tilt::RDiscountTemplate.new{ self.search_content }.render.force_encoding('utf-8')
+    end
+  end
+
   def path
     '/' + slug.split("-",4).join("/")
   end
@@ -89,15 +98,17 @@ class Article
   def match keywords
     has_find = false
     self.search_title = self.title
-    self.search_summary = self.summary
+    self.search_content = ''
     keywords.split.each do |keyword|
       if self.title.downcase.include? keyword.downcase
         has_find = true
-        self.search_title = self.search_title.gsub keyword, "<span class='search'>#{keyword}</span>"
+        self.search_title = self.search_title.gsub(/(#{keyword})/i, '<span class="search">\1</span>')
       end
       if content.downcase.include? keyword.downcase
         has_find = true
-
+        match = content.match(/(.*)(#{keyword})(.*)/).to_s
+        self.search_content << match.gsub(/(#{keyword})/i, '<span class="search">\1</span>')
+        self.search_content << "  \n...\n\n"
       end
     end
     has_find
