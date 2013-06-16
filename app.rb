@@ -84,6 +84,20 @@ class MyApp < Sinatra::Base
     }
   end
 
+  get "/my-favorite-tools" do
+    erb :"pages/my-favorite-tools", :locals => { 
+      :site_title => settings.site_title,
+      :title => settings.site_title
+    }
+  end
+
+  get "/Dandelion" do
+    erb :"pages/Dandelion", :locals => { 
+      :site_title => settings.site_title,
+      :title => settings.site_title
+    }
+  end
+
   not_found do
     erb :"pages/404", :locals => { 
       :site_title => settings.site_title,
