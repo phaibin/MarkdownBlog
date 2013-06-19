@@ -22,7 +22,7 @@ comments: true
 
 3. 在命令行下面运行：
 
-		gem install bundle
+		gem install bundler
 bundle可以更多方便地管理gem
 
 4. 到<http://code.google.com/p/selenium/downloads/list>下载IEDriverServer，这个是用来驱动IE的工具，可以让cucumber的脚本在IE中运行。如果使用Firefox来运行脚本可以不需要下载这个。下载完之后放到一个path覆盖的目录，比如C:\Windows。
