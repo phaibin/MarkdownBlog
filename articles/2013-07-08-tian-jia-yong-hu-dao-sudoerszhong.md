@@ -10,7 +10,7 @@ tags:
 添加用户到sudoers中的步骤为：
 
 1. 用`su -`切换到root用户
-2. 然后`chomod u+w /etc/sudoers`，给/etc/sudoers文件加写权限
+2. 然后`chmod u+w /etc/sudoers`，给/etc/sudoers文件加写权限
 3. `vi /etc/sudoers`，找到`root  ALL=(ALL)  ALL`这一行，在下面加入：
 
         xxx  ALL=(ALL)  ALL
