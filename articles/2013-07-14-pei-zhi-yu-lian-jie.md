@@ -45,6 +45,6 @@ tags:
       
         mount_nfs -P -o nolocks 192.168.7.189:/store /nfs_store/
 
-    或者使用Finder的"Connect To Server"窗口，输入：nfs://192.168.7.189/store
+    或者使用Finder的"Connect To Server"窗口，输入：nfs://192.168.7.189/store。如果连接不上，就在共享的属性里面加上一个insecure，比如：192.168.1.0/24(rw,insecure)
 
 9. 更改共享目录的权限，使别的机器也可以写入数据
