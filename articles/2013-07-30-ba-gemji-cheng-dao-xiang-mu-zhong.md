@@ -19,4 +19,4 @@ tags:
 
         $:.unshift(*Dir[File.dirname(__FILE__) + "/vendor/gems/**/lib"])
 
-  
+ps：在参考的那篇文章里面，在copy完gem目录之后，还需要运行gem命令生成一些文件，我试验的过程中并不需要那些步骤。
