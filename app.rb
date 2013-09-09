@@ -11,7 +11,7 @@ class MyApp < Sinatra::Base
 
   helpers do
     def archives
-      Article.articles
+      Article.archives
     end
 
     def articles

@@ -43,6 +43,19 @@ class Article
     def search(keywords)
       articles.select { |article| article.match keywords }
     end
+    
+    def archives
+      arch = {}
+      self.articles.each do |article|
+        arch[article.month_index] ||= []
+        arch[article.month_index] << article
+      end
+      arch
+      # arch.values.each do |articles|
+      #   articles.sort
+      # end
+      # arch.sort.reverse
+    end
   end
 
   def initialize(file_path)
@@ -93,6 +106,10 @@ class Article
 
   def show_date
     self.date.strftime("%Y-%m-%d")
+  end
+
+  def month_index
+    self.date.strftime("%Y.%m")
   end
 
   def match keywords

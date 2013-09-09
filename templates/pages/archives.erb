@@ -1,10 +1,11 @@
+<% for month in archives.keys %>
+<h><%= month %></h>
 <ul>
-  <% if archives.length > 0 %>
-    <% for entry in archives %>
-      <li>
-        <a href="<%= entry.path %>"><%= entry.title %></a>
-      </li>
-    <% end %>
+  <% for entry in archives[month] %>
+  <li>
+    <a href="<%= entry.path %>"><%= entry.title %></a>
+  </li>
   <% end %>
 </ul>
+<% end %>
 
