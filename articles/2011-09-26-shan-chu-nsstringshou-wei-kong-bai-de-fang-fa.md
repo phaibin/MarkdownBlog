@@ -10,4 +10,4 @@ tags:
 published: true
 comments: true
 ---
-<p>text1 = [text1 stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]</p>
+text1 = [text1 stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

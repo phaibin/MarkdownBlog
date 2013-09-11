@@ -10,10 +10,17 @@ tags:
 published: true
 comments: true
 ---
-<p><p>Git：</p>
-<p>新建~/.gitignore文件，加入：</p>
-<p>.DS_Store<br />xcuserdata</p>
-<p>然后执行：</p>
-<p>git config --global core.excludesfile ~/.gitignore</p>
-<p>SVN：</p>
-<p>编辑~/.subversion/config，取消global-ignores的注释，加入自己的内容</p></p>
+Git：
+
+新建~/.gitignore文件，加入：
+
+.DS_Store  
+xcuserdata
+
+然后执行：
+
+git config --global core.excludesfile ~/.gitignore
+
+SVN：
+
+编辑~/.subversion/config，取消global-ignores的注释，加入自己的内容

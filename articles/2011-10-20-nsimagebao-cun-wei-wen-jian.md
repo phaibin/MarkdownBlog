@@ -9,8 +9,6 @@ tags:
 published: true
 comments: true
 ---
-<p>[code lang="objc"]<br />
-NSArray *representations = [image representations];<br />
-NSData *bitmapData = [NSBitmapImageRep representationOfImageRepsInArray:representations usingType:NSPNGFileType properties:nil];<br />
-[bitmapData writeToFile:[path stringByAppendingPathComponent:@&quot;test.png&quot;]  atomically:YES];<br />
-[/code] </p>
+    NSArray *representations = [image representations];
+    NSData *bitmapData = [NSBitmapImageRep representationOfImageRepsInArray:representations usingType:NSPNGFileType properties:nil];
+    [bitmapData writeToFile:[path stringByAppendingPathComponent:@"test.png"] atomically:YES];

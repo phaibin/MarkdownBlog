@@ -8,4 +8,8 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>#history 显示历史命令列表<br />10 clear<br />11 ls<br />12 pwd<br />#!n 用第n条命令</p></p>
+\#history 显示历史命令列表  
+10 clear  
+11 ls  
+12 pwd  
+\#!n 用第n条命令

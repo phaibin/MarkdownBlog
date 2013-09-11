@@ -8,18 +8,16 @@ tags: []
 published: true
 comments: true
 ---
-<p>[code lang="objc"]<br />
-+ (UIImage *)scaleImage:(UIImage*)img toSize:(CGSize)size  <br />
-{  <br />
-    // 把它设置成为当前正在使用的context  <br />
-    UIGraphicsBeginImageContext(size);  <br />
-    // 绘制改变大小的图片  <br />
-    [img drawInRect:CGRectMake(0, 0, size.width, size.height)];  <br />
-    // 从当前context中创建一个改变大小后的图片  <br />
-    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();  <br />
-    // 使当前的context出堆栈  <br />
-    UIGraphicsEndImageContext();  <br />
-    // 返回新的改变大小后的图片  <br />
-    return scaledImage;  <br />
-}
-[/code] </p>
+    + (UIImage *)scaleImage:(UIImage*)img toSize:(CGSize)size 
+    { 
+        // 把它设置成为当前正在使用的context 
+        UIGraphicsBeginImageContext(size); 
+        // 绘制改变大小的图片 
+        [img drawInRect:CGRectMake(0, 0, size.width, size.height)]; 
+        // 从当前context中创建一个改变大小后的图片 
+        UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext(); 
+        // 使当前的context出堆栈 
+        UIGraphicsEndImageContext(); 
+        // 返回新的改变大小后的图片 
+        return scaledImage; 
+    }

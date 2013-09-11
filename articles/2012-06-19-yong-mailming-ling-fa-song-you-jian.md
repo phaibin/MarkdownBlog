@@ -16,7 +16,7 @@ comments: true
     set smtp-auth-user=me@wen.com
     set smtp-auth-password=123456
 
-#### 直接发送：
+直接发送：
 
     echo "Test from mail command" | mail -s "title" xxx@gmail.com -f from@gmail.com -c contact2@gmail.com,contact3@gmail.com -b secret@gmail.com
 
@@ -25,7 +25,7 @@ comments: true
 -c抄送，后面是逗号连接的地址
 -b密送
 
-#### 正文在文件中：
+正文在文件中：
 
     cat content.txt | mail -s "title" xxx@gmail.com
 
@@ -33,12 +33,12 @@ comments: true
 
     mail -s "title" xxx@gmail.com &lt; content.txt
 
-#### 发送附件：
+发送附件：
 
     uuencode ~/Desktop/test.jpg test.jpg | mail -s "title" xxx@gmail.com
 
 uuencode第一个参数是附件，第二个参数是附件的标题
 
-#### 发送附件和正文：
+发送附件和正文：
 
     (cat content.txt;uuencode ~/Desktop/test.jpg test.jpg) | mail -s "title" xxx@gmail.com
