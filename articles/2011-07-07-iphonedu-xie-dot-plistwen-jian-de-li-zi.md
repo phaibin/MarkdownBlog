@@ -8,27 +8,26 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>写操作：</p>
-<p>NSString *name=[txt1 text];</p>
-<p>NSNumber *phoneNumber=[[NSNumber alloc] initWithInt:[[txt2 text] intValue]];</p>
-<p>NSNumber *age=[[NSNumber alloc] initWithInt:[[txt3 text] intValue]];</p>
-<p>NSMutableArray *array=[[NSMutableArray alloc]init];</p>
-<p>[array  addObject:name];</p>
-<p>[array  addObject:phoneNumber];</p>
-<p>[array  addObject:age];</p>
-<p>NSArray *docPath=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) lastObject];</p>
-<p>NSString *filename=[path stringByAppendingPathComponent:@"personal.plist"];</p>
-<p>[array writeToFile:filename atomically:YES];</p>
-<p>[array release];</p>
-<p> </p>
-<p>读操作：</p>
-<p>
-<p>NSString *docPath=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) lastObject];</p>
-<p>NSString *filename=[path stringByAppendingPathComponent:@"personal.plist"];</p>
-<p>NSMutableArray *array=[[NSMutableArray alloc] initWithContentsOfFile:filename];</p>
-<p>txt1.text=[array objectAtIndex:0];</p>
-<p>txt2.text=[[NSString alloc] initWithFormat:@"%d",[[array objectAtIndex:1] intValue]];</p>
-<p>txt3.text=[[NSString alloc] initWithFormat:@"%d",[[array objectAtIndex:2] intValue]];</p>
-<p>[array release];</p>
-</p>
-<p> </p></p>
+写操作：
+
+    NSString *name=[txt1 text];
+    NSNumber *phoneNumber=[[NSNumber alloc] initWithInt:[[txt2 text] intValue]];
+    NSNumber *age=[[NSNumber alloc] initWithInt:[[txt3 text] intValue]];
+    NSMutableArray *array=[[NSMutableArray alloc]init];
+    [array  addObject:name];
+    [array  addObject:phoneNumber];
+    [array  addObject:age];
+    NSArray *docPath=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) lastObject];
+    NSString *filename=[path stringByAppendingPathComponent:@"personal.plist"];
+    [array writeToFile:filename atomically:YES];
+    [array release];
+
+读操作：
+
+    NSString *docPath=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) lastObject];
+    NSString *filename=[path stringByAppendingPathComponent:@"personal.plist"];
+    NSMutableArray *array=[[NSMutableArray alloc] initWithContentsOfFile:filename];
+    txt1.text=[array objectAtIndex:0];
+    txt2.text=[[NSString alloc] initWithFormat:@"%d",[[array objectAtIndex:1] intValue]];
+    txt3.text=[[NSString alloc] initWithFormat:@"%d",[[array objectAtIndex:2] intValue]];
+    [array release];

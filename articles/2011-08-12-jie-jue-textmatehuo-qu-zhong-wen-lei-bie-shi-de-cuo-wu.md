@@ -8,7 +8,8 @@ tags: []
 published: true
 comments: true
 ---
-<p>打开Bundle编辑器，找到Category命令，把下面这句：<br />
-res = %x{ iconv &lt;&lt;&#x27;APPLESCRIPT&#x27; -f utf-8 -t mac|osascript 2&gt;/dev/null<br />
-改为：<br />
-res = %x{ iconv &lt;&lt;&#x27;APPLESCRIPT&#x27; -f utf-8 -t utf-8|osascript 2&gt;/dev/null</p>
+打开Bundle编辑器，找到Category命令，把下面这句：
+> res = %x{ iconv <<'APPLESCRIPT' -f utf-8 -t mac|osascript 2>/dev/null
+
+改为：
+> res = %x{ iconv <<'APPLESCRIPT' -f utf-8 -t utf-8|osascript 2>/dev/null

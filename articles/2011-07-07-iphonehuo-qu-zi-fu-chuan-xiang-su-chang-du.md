@@ -8,4 +8,4 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>CGSize sizeOfStr = [str sizeWithFont:[UIFont systemFontOfSize:29] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:UILineBreakModeCharacterWrap];</p></p>
+    CGSize sizeOfStr = [str sizeWithFont:[UIFont systemFontOfSize:29] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:UILineBreakModeCharacterWrap];

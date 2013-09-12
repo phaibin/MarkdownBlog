@@ -8,28 +8,21 @@ tags: []
 published: true
 comments: true
 ---
-<p>[code lang="objc"]<br />
-// Create paths to output images<br />
-NSString  *pngPath = [NSHomeDirectory() stringByAppendingPathComponent:@&quot;Documents/Test.png&quot;];<br />
-NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@&quot;Documents/Test.jpg&quot;];<br />
- 
-// Write a UIImage to JPEG with minimum compression (best quality)<br />
-// The value 'image' must be a UIImage object<br />
-// The value '1.0' represents image compression quality as value from 0.0 to 1.0<br />
-[UIImageJPEGRepresentation(image, 1.0) writeToFile:jpgPath atomically:YES];<br />
- 
-// Write image to PNG<br />
-[UIImagePNGRepresentation(image) writeToFile:pngPath atomically:YES];<br />
- 
-// Let's check to see if files were successfully written...<br />
- 
-// Create file manager<br />
-NSError *error;<br />
-NSFileManager *fileMgr = [NSFileManager defaultManager];<br />
- 
-// Point to Document directory<br />
-NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@&quot;Documents&quot;];<br />
- 
-// Write out the contents of home directory to console<br />
-NSLog(@&quot;Documents directory: %@&quot;, [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&amp;error]);<br />
-[/code] </p>
+
+    // Create paths to output images
+    NSString *pngPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Test.png"];
+    NSString *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Test.jpg"];
+    // Write a UIImage to JPEG with minimum compression (best quality)
+    // The value 'image' must be a UIImage object
+    // The value '1.0' represents image compression quality as value from 0.0 to 1.0
+    [UIImageJPEGRepresentation(image, 1.0) writeToFile:jpgPath atomically:YES];
+    // Write image to PNG
+    [UIImagePNGRepresentation(image) writeToFile:pngPath atomically:YES];
+    // Let's check to see if files were successfully written...
+    // Create file manager
+    NSError *error;
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    // Point to Document directory
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    // Write out the contents of home directory to console
+    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
