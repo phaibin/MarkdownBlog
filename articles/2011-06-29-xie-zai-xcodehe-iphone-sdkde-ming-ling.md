@@ -8,4 +8,6 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>sudo /Developer/Library/uninstall-devtools --mode=all<br /><br />sudo /Developer/Library/uninstall-developer-folders</p></p>
+sudo /Developer/Library/uninstall-devtools --mode=all
+
+sudo /Developer/Library/uninstall-developer-folders

@@ -8,17 +8,17 @@ tags: []
 published: true
 comments: true
 ---
-<p>NSView - UIView<br />
-NSButton - UIButton<br />
-NSTextField - UITextField<br />
-NSRect - CGRect<br />
-NSSize - CGSize<br />
-NSZeroRect - CGRectZero</p>
+- NSView - UIView
+- NSButton - UIButton
+- NSTextField - UITextField
+- NSRect - CGRect
+- NSSize - CGSize
+- NSZeroRect - CGRectZero
 
-<p>CGColorCreateGenericRGB -UIColor colorWithRed:green:blue:alpha:<br />
-NSValueBinding -n/a bindings with view objects not supported<br />
-NSMenuItem -n/a (menus not supported<br />
-NSGraphicsContext -CGContext<br />
-NSLeftArrowFunctionKey -n/a (iOS does not have a keyboard)</p>
+- CGColorCreateGenericRGB -UIColor colorWithRed:green:blue:alpha:
+- NSValueBinding -n/a bindings with view objects not supported
+- NSMenuItem -n/a (menus not supported
+- NSGraphicsContext -CGContext
+- NSLeftArrowFunctionKey -n/a (iOS does not have a keyboard)
 
-<p>NSCompositeSourceOver - kCGBlendModeNormal (which is the default blend mode in a CGContext)</p>
+- NSCompositeSourceOver - kCGBlendModeNormal (which is the default blend mode in a CGContext)

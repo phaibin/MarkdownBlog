@@ -8,4 +8,9 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>@implementation NSString (Escaping)<br />- (NSString*)stringWithPercentEscape <br />{                <br /> return [(NSString *) CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)[[self mutableCopy] autorelease], NULL, CFSTR("=,!$&amp;'()*+;@?n"&lt;&gt;#t :/"),kCFStringEncodingUTF8) autorelease];<br />}<br />@end</p></p>
+    @implementation NSString (Escaping)
+    - (NSString*)stringWithPercentEscape 
+    {                
+    return [(NSString *) CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)[[self mutableCopy] autorelease], NULL, CFSTR("=,!$&'()*+;@?n"<>#t :/"),kCFStringEncodingUTF8) autorelease];
+    }
+    @end
