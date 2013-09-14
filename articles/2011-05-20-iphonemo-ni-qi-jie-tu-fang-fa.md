@@ -8,4 +8,4 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>CTRL+COMMAND+C 然后在Preview里New from clipboard</p></p>
+CTRL+COMMAND+C 然后在Preview里New from clipboard

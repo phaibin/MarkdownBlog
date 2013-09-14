@@ -8,7 +8,13 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>首先加入AudioToolbox.framwork，然后加入头文件：</p>
-<p>#import &lt;AudioToolbox/AudioToolbox.h&gt;</p>
-<p>播放的代码为：</p>
-<p>NSString *path = [[NSBundle mainBundle] pathForResource:@"crunch" ofType:@"wav"];<br />SystemSoundID soundID;<br />AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:path], &amp;soundID);<br />AudioServicesPlaySystemSound(soundID);</p></p>
+首先加入AudioToolbox.framwork，然后加入头文件：
+
+    #import <AudioToolbox/AudioToolbox.h>
+
+播放的代码为：
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"crunch" ofType:@"wav"];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:path], &soundID);
+    AudioServicesPlaySystemSound(soundID);
