@@ -8,37 +8,40 @@ tags: []
 published: true
 comments: true
 ---
-<p><p style="font:14px 'STHeiti Light';margin:0;">1. 在 /etc/host 内加入:</p>
-<p style="font:14px 'STHeiti Light';margin:0;">127.0.0.1 parallels.com</p>
-<p style="font:14px 'STHeiti Light';margin:0;">127.0.0.1 registration.parallels.com</p>
-<p style="font:14px 'STHeiti Light';margin:0;">127.0.0.1 update.parallels.com</p>
-<p style="font:14px 'STHeiti Light';margin:0;">127.0.1.1 pd6.blist.parallels.com</p>
-<p style="font:14px 'STHeiti Light';margin:0;"> </p>
-<p style="font:14px 'STHeiti Light';margin:0;">2. 打开终端输入:</p>
-<p style="font:14px 'STHeiti Light';margin:0;">dscacheutil -flushcache</p>
-<p style="font:14px 'STHeiti Light';margin:0;">清空dns记录</p>
-<p style="font:14px 'STHeiti Light';margin:0;"> </p>
-<p style="font:14px 'STHeiti Light';margin:0;">3.使用终端输入如下:</p>
-<p style="font:14px 'STHeiti Light';margin:0;">rm -rfd /Users/~You~/Library/Preferences/com.parallels*</p>
-<p style="font:14px 'STHeiti Light';margin:0;">rm -rfd /Users/~You~/Library/Preferences/Parallels/*</p>
-<p style="font:14px 'STHeiti Light';margin:0;">rm -rfd /Users/~You~/Library/Preferences/Parallels</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/var/db/Parallels/Stats/*</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/var/db/Parallels/Stats</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/var/db/Parallels</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /Library/Logs/parallels.log</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /Library/Preferences/Parallels/*</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /Library/Preferences/Parallels</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/var/db/Parallels</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/var/.Parallels_swap</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/var/db/receipts/'com.parallels*'</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/tmp/qtsingleapp-*-lockfile</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/tmp/com.apple.installer*/*</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/tmp/com.apple.installer*</p>
-<p style="font:14px 'STHeiti Light';margin:0;">sudo -s rm -rfd /private/var/root/Library/Preferences/com.parallels.desktop.plist</p>
-<p style="font:14px 'STHeiti Light';margin:0;"> </p>
-<p style="font:14px 'STHeiti Light';margin:0;">4.安装11992后断网。</p>
-<p style="font:14px 'STHeiti Light';margin:0;">运行Parallels Desktop 后输入如下序列号：</p>
-<p style="font:14px 'STHeiti Light';margin:0;">N9N4PQ-G3XFTK-6G7A74-AKAD14-QKXNXJ</p>
-<p style="font:14px 'STHeiti Light';margin:0;"> </p>
-<p style="font:14px 'STHeiti Light';margin:0;"> </p>
-<p style="font:14px 'STHeiti Light';margin:0;">如果不成功请重新来一次</p></p>
+1. 在 /etc/host 内加入:
+
+        127.0.0.1 parallels.com
+        127.0.0.1 registration.parallels.com
+        127.0.0.1 update.parallels.com
+        127.0.1.1 pd6.blist.parallels.com
+ 
+2. 打开终端输入:
+
+        dscacheutil -flushcache
+清空dns记录
+ 
+3. 使用终端输入如下:
+
+        rm -rfd /Users/~You~/Library/Preferences/com.parallels*
+        rm -rfd /Users/~You~/Library/Preferences/Parallels/*
+        rm -rfd /Users/~You~/Library/Preferences/Parallels
+        sudo -s rm -rfd /private/var/db/Parallels/Stats/*
+        sudo -s rm -rfd /private/var/db/Parallels/Stats
+        sudo -s rm -rfd /private/var/db/Parallels
+        sudo -s rm -rfd /Library/Logs/parallels.log
+        sudo -s rm -rfd /Library/Preferences/Parallels/*
+        sudo -s rm -rfd /Library/Preferences/Parallels
+        sudo -s rm -rfd /private/var/db/Parallels
+        sudo -s rm -rfd /private/var/.Parallels_swap
+        sudo -s rm -rfd /private/var/db/receipts/'com.parallels*'
+        sudo -s rm -rfd /private/tmp/qtsingleapp-*-lockfile
+        sudo -s rm -rfd /private/tmp/com.apple.installer*/*
+        sudo -s rm -rfd /private/tmp/com.apple.installer*
+        sudo -s rm -rfd /private/var/root/Library/Preferences/com.parallels.desktop.plist
+
+4. 安装11992后断网。
+
+运行Parallels Desktop 后输入如下序列号：
+N9N4PQ-G3XFTK-6G7A74-AKAD14-QKXNXJ
+ 
+如果不成功请重新来一次

@@ -8,4 +8,4 @@ tags: []
 published: true
 comments: true
 ---
-<p>打开终端，输入:sudo /Applications/TextEdit.app/Contents/MacOS/TextEdit /etc/hosts就可以用文本编辑来直观修改hosts了。</p>
+打开终端，输入:sudo /Applications/TextEdit.app/Contents/MacOS/TextEdit /etc/hosts就可以用文本编辑来直观修改hosts了。

@@ -8,7 +8,10 @@ tags: []
 published: true
 comments: true
 ---
-<p><strong>Windows Web Server 2008 R2：</strong>KBV3Q-DJ8W7-VPB64-V88KG-82C49
-<strong>Windows Server 2008 R2 Standard：</strong>4GGC4-9947F-FWFP3-78P6F-J9HDR
-<strong>Windows Server 2008 R2 Enterprise：</strong>7PJBC-63K3J-62TTK-XF46D-W3WMD
-<strong>Windows Server 2008 R2 Datacenter：</strong>QX7TD-2CMJR-D7WWY-KVCYC-6D2YT</p>
+Windows Web Server 2008 R2：KBV3Q-DJ8W7-VPB64-V88KG-82C49 
+
+Windows Server 2008 R2 Standard：4GGC4-9947F-FWFP3-78P6F-J9HDR 
+
+Windows Server 2008 R2 Enterprise：7PJBC-63K3J-62TTK-XF46D-W3WMD 
+
+Windows Server 2008 R2 Datacenter：QX7TD-2CMJR-D7WWY-KVCYC-6D2YT
