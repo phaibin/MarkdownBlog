@@ -19,12 +19,14 @@ class MyApp < Sinatra::Base
     end
   end
 
-  set :public_dir, 'public'
-  set :views, File.dirname(__FILE__)+'/templates'
-  set :site_title => "海神"
-  set :url => "http://phaibin.herokuapp.com"
-  set :author => "文祥"
-  set :disqus => "phaibin"
+  configure do 
+    set :public_dir, 'public'
+    set :views, File.dirname(__FILE__)+'/templates'
+    set :site_title => "海神"
+    set :url => "http://phaibin.herokuapp.com"
+    set :author => "文祥"
+    set :disqus => "phaibin"
+  end
 
   get '/' do
     erb :"pages/index", :locals => { 
@@ -78,21 +80,35 @@ class MyApp < Sinatra::Base
   end
 
   get "/about" do
-    erb :"pages/about", :locals => { 
+    markdown :"pages/about", :layout_engine => :erb, :locals => { 
       :site_title => settings.site_title,
       :title => settings.site_title
     }
   end
 
   get "/my-favorite-tools" do
-    erb :"pages/my-favorite-tools", :locals => { 
+    markdown :'pages/my-favorite-tools', :layout_engine => :erb, :locals => { 
       :site_title => settings.site_title,
       :title => settings.site_title
     }
   end
 
-  get "/Dandelion" do
-    erb :"pages/Dandelion", :locals => { 
+  get "/snapshot" do
+    markdown :'pages/snapshot', :layout_engine => :erb, :locals => { 
+      :site_title => settings.site_title,
+      :title => settings.site_title
+    }
+  end
+
+  get "/works" do
+    markdown :'pages/works', :layout_engine => :erb, :locals => { 
+      :site_title => settings.site_title,
+      :title => settings.site_title
+    }
+  end
+
+  get "/dandelion" do
+    markdown :"pages/Dandelion", :layout_engine => :erb, :locals => { 
       :site_title => settings.site_title,
       :title => settings.site_title
     }

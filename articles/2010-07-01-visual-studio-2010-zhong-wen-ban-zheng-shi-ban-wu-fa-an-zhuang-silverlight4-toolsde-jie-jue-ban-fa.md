@@ -8,4 +8,8 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>打开注册表</p>  <p>打开节点：HKEY_LOCAL_MACHINESOFTWAREMicrosoftVisualStudio10.0SetupVSBuildNumber</p>  <p>在此处增加一个&quot;字符串值&quot;，输入名称为“1033”，设置它的值为“10.0.30319”</p></p>
+打开注册表
+
+打开节点：HKEY_LOCAL_MACHINESOFTWAREMicrosoftVisualStudio10.0SetupVSBuildNumber
+
+在此处增加一个"字符串值"，输入名称为“1033”，设置它的值为“10.0.30319”

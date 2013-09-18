@@ -8,4 +8,4 @@ tags: []
 published: true
 comments: true
 ---
-<p><p> 在cmd中运行：lodctr /R:PerfStringBackup.ini</p></p>
+在cmd中运行：lodctr /R:PerfStringBackup.ini

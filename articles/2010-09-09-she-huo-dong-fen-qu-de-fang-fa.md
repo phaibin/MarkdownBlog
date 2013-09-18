@@ -8,9 +8,14 @@ tags: []
 published: true
 comments: true
 ---
-<p><p>diskpart</p>
-<p>list disk</p>
-<p>select disk 0</p>
-<p>list partition</p>
-<p>select partition 6</p>
-<p>active (inactive设为非活动)</p></p>
+diskpart
+
+list disk
+
+select disk 0
+
+list partition
+
+select partition 6
+
+active (inactive设为非活动)
