@@ -17,6 +17,11 @@ comments: true
     sudo chmod 666 /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/IDETextKeyBindingSet.plist
 然后打开`/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/IDETextKeyBindingSet.plist`，在Deletions下面增加：`Delete Current Line`，值为：
     deleteToBeginningOfLine:, moveToEndOfLine:, deleteToBeginningOfLine:, deleteBackward:, moveDown:, moveToBeginningOfLine:
+
 在Insertions and Indentations下面增加：`Duplicate Current Line`，值为：
     selectLine:, copy:, moveToEndOfLine:, insertNewline:, paste:, deleteBackward:
+
+再增加：`Insert Line Under`，值为：
+    moveToEndOfLine:, insertNewline:
+
 然后重启Xcode，打开设置，Key Bindings，找到“Delete Current Line”和“Duplicate Current Line”这两项，设置为自己想要的快捷键。
