@@ -108,7 +108,7 @@ class MyApp < Sinatra::Base
   end
 
   get "/dandelion" do
-    markdown :"pages/Dandelion", :layout_engine => :erb, :locals => { 
+    markdown :"pages/dandelion", :layout_engine => :erb, :locals => { 
       :site_title => settings.site_title,
       :title => settings.site_title
     }
