@@ -5,3 +5,5 @@
 可以很方便地部署到heroku。
 
 另外还建立了另外一个task：rake publish，会默认提交代码，并push到github和heroku。
+
+demo: <http://phaibin.tk>
