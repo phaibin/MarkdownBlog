@@ -46,6 +46,6 @@ comments: true
 
 ---
 
-Voyeur程序下载：[Voyeur](/attachment/Voyeur.app.zip)
+Voyeur程序下载：[Voyeur](/attachment/Voyeur.app.zip)。(打开没有主界面，需要从菜单File来打开一个pdf文件)
 
 Demo：<https://github.com/phaibin/PDFContents>
