@@ -8,7 +8,7 @@ Rails里面的Model不需要写字段，有一个问题就是自己也搞不清�
 
 ![annotate](/images/articles/rails_annotate.png)
 
-运行`rails g annotate:install`会生成一个名为`auto_annotate_models.rake`的配置文件。里面有一个参数可以配置。
+运行`rails g annotate:install`会生成一个名为`auto_annotate_models.rake`的配置文件。里面有一些参数可以配置。
 
 在项目目录下运行`annotate`就会给所有的Model生成注释。
 
