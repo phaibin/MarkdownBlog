@@ -36,3 +36,17 @@ SublimeLinter是Sublime Text中的一个插件，用来检测代码的语法错�
 会在保存时弹出错误信息：
 
 ![SublimeLinter-2](/images/articles/SublimeLinter-2.png)
+
+------------------------------------------------------------
+
+####2013-01-19 更新
+
+在Sublime Text 3中安装最新的插件，居然用法完全不一样了。
+
+在安装完SublimeLinter之后，需要再安装SublimeLinter_xxx的插件，xxx代表用来检测语法的那个插件。比如我要检测xml的，就要安装SublimeLinter_xmllint的插件。安装完这个插件之后会自动修改SublimeLinter的配置文件，将xml的支持加上。一般不需要再进行其他的配置了。
+
+SublimeLinter的一个快捷键是ctrl+cmd+A，显示所有的错误。
+
+SublimeLinter_xmllint需要安装xmllint的工具，Mac OS上面已经自带了。windows下可以下载编译好的版本或者自己编译。官方给的链接是：<http://flowingmotion.jojordan.org/2011/10/08/3-steps-to-download-xmllint/>。也可以从我这里下载：[libxml](/attachment/libxml.zip)。
+
+xmllint这个命令也可以直接使用，会把所有的错误显示出来，其实也很方便。
