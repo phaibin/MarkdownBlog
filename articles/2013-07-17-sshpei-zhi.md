@@ -9,7 +9,7 @@ tags:
 
 1. 在本机运行`ssh-keygen -t rsa`，生成id_rsa、id_rsa.pub两个文件，一个私钥，一个公钥
 
-2. 把id_rsa.pub文件copy到目标机器的~/.ssh目录下面，执行`cat id_dsa.pub >> ~/.ssh/authorized_keys`
+2. 把id_rsa.pub文件copy到目标机器的~/.ssh目录下面，执行`cat id_rsa.pub >> ~/.ssh/authorized_keys`
 
 3. 把.ssh的权限设为700，authorized_keys文件设为600
 
