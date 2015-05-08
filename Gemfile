@@ -1,9 +1,9 @@
 source "http://ruby.taobao.org"
 
-ruby "2.1.2"
+ruby "2.2.2"
 
 gem 'rdiscount'
-gem 'sinatra', '~> 1.4.0'
+gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'thin'
 gem 'tilt'
