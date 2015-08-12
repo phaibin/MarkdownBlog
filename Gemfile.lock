@@ -41,3 +41,6 @@ DEPENDENCIES
   stringex
   thin
   tilt
+
+BUNDLED WITH
+   1.10.3
