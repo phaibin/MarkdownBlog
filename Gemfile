@@ -1,6 +1,6 @@
-source "http://ruby.taobao.org"
+source "https://ruby.taobao.org"
 
-ruby "2.2.2"
+ruby "2.2.3"
 
 gem 'rdiscount'
 gem 'sinatra'
