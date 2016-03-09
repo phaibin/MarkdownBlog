@@ -1,5 +1,5 @@
 GEM
-  remote: https://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     backports (3.6.4)
     builder (3.2.0)
@@ -43,4 +43,4 @@ DEPENDENCIES
   tilt
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
