@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: https://ruby.taobao.org/
   specs:
     backports (3.6.4)
     builder (3.2.0)
