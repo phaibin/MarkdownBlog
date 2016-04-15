@@ -45,6 +45,12 @@ date: 2016-04-15 09:11
 
 有一个很方便的package：`electron-json-storage`，来保存一些设置。只需要用 set key, get key，这种形式来使用就好了。
 
+####安全
+
+Electron是一项Web技术，要保护代码是不可能的，在Electron和Atom的社区都有讨论，他们也没有计划做任何安全性的工作。
+
+不过我后来搜索到这么一篇文章：<https://wiredcraft.com/blog/high-security-electron-js-application/>。看到这篇文章有点大开眼界。这篇文章讲了他的公司为了给缅甸大选做投票系统，而做的选型考虑。是用C++/C#这样的原生代码，但是Electron这样的Web技术。最后他们的选择居然是Electron。不过他们为了安全性，把一部分数据保存的工作移到了Go开发的底层模块中，然后用js来调用Go的功能。里面讲到Go官方并不支持他们的数据库SQLCipher，于是他就自己写了一个Go的适配器！真NB！然后我发现作者居然是中国人，他的公司就在上海，哈！
+
 ####其他
 
 1. 网页中报jQuery not found错误，在就BrowserWindow的初始化中加入一个参数：
@@ -79,10 +85,10 @@ date: 2016-04-15 09:11
 ####参考
 
 - [Electron中文文档](https://www.gitbook.com/book/wizardforcel/electron-doc/details)
-- [Electron教程](http://electron.rocks)
+- [ELECTRON ROCKS!](http://electron.rocks)，Electron爱好者建的小站，文章都很棒
 - [Electron SuperKit](https://github.com/Aluxian/electron-superkit)
 - [Awesome Electron](https://github.com/sindresorhus/awesome-electron)，Electron的一些精彩应用
-
+- [Electron Fundamentals](http://maxogden.com/electron-fundamentals.html)，Electron的一篇高级教程
 
 
 
