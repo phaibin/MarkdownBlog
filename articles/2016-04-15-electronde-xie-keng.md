@@ -81,6 +81,7 @@ Electron是一项Web技术，要保护代码是不可能的，在Electron和Atom
           mainWindow.loadURL(url);
         });
 1. 我发现electron程序跟浏览器行为一样，会记住用户的登录，什么工作也不需要做。但是公司的网站不行，应该是本身网站的程序有问题。
+1. Electron的windows版本依赖.NetFramework，而且不同版本的Electron依赖的.NetFramework版本也不同，目前最新版本的Electron版本是v0.37.5，需要.NetFramework 4.5.1。很诡异的是VS Code使用的Electron版本是0.35.6，居然不需要装.NetFramework 4.0就可以运行。
 
 ####参考
 
