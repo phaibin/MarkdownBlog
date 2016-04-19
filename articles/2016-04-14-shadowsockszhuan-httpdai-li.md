@@ -42,10 +42,11 @@ Shadowsocks是socks代理，除了网页其他地方是没法用的。命令行�
 1. 编辑nginx的MIME配置：/usr/local/etc/nginx/mime.types，将pac文件的类型设置为：`application/x-ns-proxy-autoconfig`
 1. sudo nginx
 1. 这时候你的pac就建立好了：http://your ip/proxy.pac
-1. 还有最主要的在.zshrc里面加入代理：
+1. 还有最主要的在.zshrc里面加入代理（记得忽略本地地址）：
 
         export http_proxy='http://127.0.0.1:8118'
         export https_proxy='https://127.0.0.1:8118'
+        export no_proxy='localhost,127.0.0.0/8,172.16.0.0/12,192.168.0.0/16'
 
 等一切都配置好之后，我满心欢喜地敲了`npm install`，等待完美的结果。可是等来的只是无尽的等待。。。
 
