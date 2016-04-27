@@ -44,8 +44,8 @@ Shadowsocks是socks代理，除了网页其他地方是没法用的。命令行�
 1. 这时候你的pac就建立好了：http://your ip/proxy.pac
 1. 还有最主要的在.zshrc里面加入代理（记得忽略本地地址）：
 
-        export http_proxy='http://127.0.0.1:8118'
-        export https_proxy='http://127.0.0.1:8118'
-        export no_proxy='localhost,127.0.0.0/8,172.16.0.0/12,192.168.0.0/16'
+        export http_proxy=http://127.0.0.1:8118
+        export https_proxy=http://127.0.0.1:8118
+        export no_proxy=localhost,127.0.0.0/8,172.16.0.0/12,192.168.0.0/16
 
 
