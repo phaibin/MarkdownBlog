@@ -45,15 +45,7 @@ Shadowsocks是socks代理，除了网页其他地方是没法用的。命令行�
 1. 还有最主要的在.zshrc里面加入代理（记得忽略本地地址）：
 
         export http_proxy='http://127.0.0.1:8118'
-        export https_proxy='https://127.0.0.1:8118'
+        export https_proxy='http://127.0.0.1:8118'
         export no_proxy='localhost,127.0.0.0/8,172.16.0.0/12,192.168.0.0/16'
 
-等一切都配置好之后，我满心欢喜地敲了`npm install`，等待完美的结果。可是等来的只是无尽的等待。。。
 
-运行`curl https://twitter.com`是没有问题，可是`npm install`到`npm http request GET https://registry.npmjs.org/meow`的时候，就卡住不动了。
-
-试了下单独在npm中配置代理
-
-    npm config set proxy http://localhost:8118
-
-是可以的！这应该是npm的bug。
