@@ -96,7 +96,6 @@ body > nav > form {
 body > footer {
   text-align: center;
   margin-left: 10px;
-  font-style: italic;
   font-size: 14px;
   color: #888;
 }
@@ -107,6 +106,14 @@ body > footer > section#link > a {
   font-weight: bold;
   font-style: normal;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body > footer> section#friend_link {
+  font-weight: bold;
+}
+
+body > footer> section#power {
+  font-style: italic;
 }
 
 /* section */
