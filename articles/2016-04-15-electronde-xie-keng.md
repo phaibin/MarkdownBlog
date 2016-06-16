@@ -83,6 +83,22 @@ Electron是一项Web技术，要保护代码是不可能的，在Electron和Atom
 1. 我发现electron程序跟浏览器行为一样，会记住用户的登录，什么工作也不需要做。但是公司的网站不行，应该是本身网站的程序有问题。
 1. Electron的windows版本依赖.NetFramework，而且不同版本的Electron依赖的.NetFramework版本也不同，目前最新版本的Electron版本是v0.37.5，需要.NetFramework 4.5.1。很诡异的是VS Code使用的Electron版本是0.35.6，居然不需要装.NetFramework 4.0就可以运行。
 
+-----------
+
+<font color='red'>6月16日更新：</font>
+
+我发现其实对.NetFramework的依赖来源于electron-builder生成的安装文件，如果直接把可执行文件复制到windows上面，是不需要.NetFramework就可以打开的。而对.NetFramework的依赖根源来源于electron-builder依赖的squirrel.windows。
+
+最近Electron升级到1.0了，而electron-builder也更新了很多版本（依然非常活跃，经常更新版本）。在electron-builder的v5.4.0版本中，加入了对NSIS的支持，他们的commit中用feat（壮举）来形容。使用NSIS有很多优点，具体可以参考这个issue：<https://github.com/electron-userland/electron-builder/issues/472>。让用户先安装.NetFramework毕竟不是很友好，那转为用NSIS之后是不是就不需要了呢？我也是抱着很兴奋的心情试了一下，居然真的不需要了！使用NSIS的方法是，在package.json中修改：
+
+    "build": {
+      "win": {
+        "target": "nsis"
+      }
+    },
+
+不过官方也说还远没有到ideal的程度。比如，这样就失去了Auto update的能力。
+
 ####参考
 
 - [Electron中文文档](https://www.gitbook.com/book/wizardforcel/electron-doc/details)
