@@ -35,6 +35,7 @@ PLATFORMS
 
 DEPENDENCIES
   builder
+  rack (< 2.0)
   rdiscount
   sinatra
   sinatra-contrib
