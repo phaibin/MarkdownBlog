@@ -19,6 +19,7 @@ Fisherman带的插件不多，不过可以安装omf(oh my fish)的插件。
 
 一些常用插件：
 
+- git_util：git相关的一些函数
 - omf/theme-default：omf的默认主题
 - omf/osx：操作osx的插件
 - omf/proxy：代理
@@ -40,7 +41,7 @@ Fisherman带的插件不多，不过可以安装omf(oh my fish)的插件。
 
 最后两行是用来修复nvm的。在集成nvm之后，npm全局安装的命令没法执行，只有运行一下node或者npm才能加载环境。加上这两句就好了。
 
-如果使用omf的默认theme，里面有一些function是Fihserman缺少的，这里放一个下载：[fish.zip](/attachment/fish.zip)。这个包里面还有一个`.config/fisherman/default/fish_prompt.fish`文件。因为默认的主题会把路径里面的目录简写，这个文件的修改就是显示全路径。
+如果使用omf的默认theme，里面有一些function是Fihserman缺少的。装完`git_util`插件就可以使用这些函数了。这里是我修改的[fish_prompt.fish](/attachment/fish_prompt.fish)文件。因为默认的主题会把路径里面的目录简写，这个文件的修改就是显示全路径。
 
 grc这个插件有个问题，它会把ls命令的输出列表变成竖的，就像ll那样。修复的方法就是修改`.config/fisherman/grc/init.fish`文件，把里面的ls删掉。
 
