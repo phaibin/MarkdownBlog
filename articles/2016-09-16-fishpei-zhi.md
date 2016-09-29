@@ -4,6 +4,13 @@ date: 2016-09-16 11:19
 ---
 Fish安装很容易，brew install fish就好了。
 
+切换到Fish：
+
+    $ echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+    $ chsh -s /usr/local/bin/fish
+
+Fish自带一个管理工具，运行fish_config就会打开一个web管理工具。在这里面可以修改prompt的颜色和格式。推荐其中的"Tomorrow Night"主题颜色，看着很舒服。这里的颜色设置会覆盖Iterm2里面的颜色设置，再在Item2里面修改颜色就不起作用了。
+
 与oh-my-zsh相似，也有一个对应的oh-my-fish。不过又出现了一个更流行的管理器：[Fisherman](https://github.com/fisherman/fisherman)。
 
 安装：`curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher`。
@@ -44,4 +51,3 @@ Fisherman带的插件不多，不过可以安装omf(oh my fish)的插件。
 如果使用omf的默认theme，里面有一些function是Fihserman缺少的。装完`git_util`插件就可以使用这些函数了。这里是我修改的[fish_prompt.fish](/attachment/fish_prompt.fish)文件。因为默认的主题会把路径里面的目录简写，这个文件的修改就是显示全路径。
 
 grc这个插件有个问题，它会把ls命令的输出列表变成竖的，就像ll那样。修复的方法就是修改`.config/fisherman/grc/init.fish`文件，把里面的ls删掉。
-
