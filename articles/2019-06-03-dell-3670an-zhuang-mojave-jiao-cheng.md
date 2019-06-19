@@ -71,3 +71,57 @@ date: 2019-06-03 10:34
 <https://github.com/inyan600/Dell-Inspiron-3670-Hackintosh>
 
 <https://www.tonymacx86.com>
+
+---
+
+### 2019.06.19 更新
+
+解决10.14.5 USB3.0不能识别的问题
+
+在`Kernel and Kext Patches`下面添加下面4个Patch：
+
+1. Patch #1:
+
+    ```
+    Name*: com.apple.iokit.IOUSBHostFamily
+    Find* [HEX]: 83FB0F0F
+    Replace* [HEX]: 83FB3F0F
+    Comment: USB Port Limit Patch 1 PMHeart/DalianSky
+    MatchOS: 10.14.x
+    ```
+
+1. Patch #2:
+
+    ```
+    Name*: com.apple.iokit.IOUSBHostFamily
+    Find* [HEX]: 83E30FD3
+    Replace* [HEX]: 83E33FD3
+    Comment: USB Port Limit Patch 2 PMHeart/DalianSky
+    MatchOS: 10.14.x
+    ```
+
+1. Patch #3:
+
+    ```
+    Name*: com.apple.driver.usb.AppleUSBXHCI
+    Find* [HEX]: 83FB0F0F
+    Replace* [HEX]: 83FB3F0F
+    Comment: USB Port Limit Patch 3 PMHeart/DalianSky
+    MatchOS: 10.14.x
+    ```
+
+1. Patch #4:
+
+    ```
+    Name*: com.apple.driver.usb.AppleUSBXHCI
+    Find* [HEX]: 83FF0F0F
+    Replace* [HEX]: 83FF3F0F
+    Comment: USB Port Limit Patch 4 PMHeart/DalianSky
+    MatchOS: 10.14.x
+    ```
+
+并且更新最新的[Lilu.kext](https://github.com/acidanthera/Lilu/releases) & [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
+
+参考：
+
+<https://hackintosher.com/guides/hackintosh-mojave-10-14-5-update-guide/#usb>
