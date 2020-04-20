@@ -28,7 +28,7 @@ end
 desc "Publish my blog."
 task :publish do
   out "publishing your article(s)..."
-  `git add .; git commit -am "new post"; git push heroku master; git push origin master`
+  `git add .; git commit -am "new post"; git push origin master`
 end
 
 def out msg
