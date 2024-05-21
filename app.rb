@@ -114,6 +114,13 @@ class MyApp < Sinatra::Base
     }
   end
 
+  get "/privacy-policy" do
+    markdown :"pages/privacy-policy", :layout_engine => :erb, :locals => { 
+      :site_title => settings.site_title,
+      :title => settings.site_title
+    }
+  end
+
   not_found do
     erb :"pages/404", :locals => { 
       :site_title => settings.site_title,
