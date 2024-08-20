@@ -121,6 +121,27 @@ class MyApp < Sinatra::Base
     }
   end
 
+  get "/moliview/help" do
+    markdown :"pages/moliview/help", :locals => { 
+      :site_title => settings.site_title,
+      :title => settings.site_title
+    }
+  end
+
+  get "/moliview/whatsnew" do
+    markdown :"pages/moliview/whatsnew", :locals => { 
+      :site_title => settings.site_title,
+      :title => settings.site_title
+    }
+  end
+
+  get "/privacy-policy" do
+    markdown :"pages/privacy-policy", :layout_engine => :erb, :locals => { 
+      :site_title => settings.site_title,
+      :title => settings.site_title
+    }
+  end
+
   get "/privacy-policy" do
     markdown :"pages/privacy-policy", :layout_engine => :erb, :locals => { 
       :site_title => settings.site_title,
