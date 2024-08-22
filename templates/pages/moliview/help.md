@@ -1,5 +1,4 @@
-## Browse
----
+### Browse
 **Space / Page Down / →** Next Image
 
 **Page Up / ←** Previous Image
@@ -20,8 +19,8 @@
 
 **⇧⌘←** Previous 100 Images
 
-## View
 ---
+### View
 **=** Zoom In
 
 **-** Zoom Out
@@ -40,8 +39,8 @@
 
 **⌘↑/↓/←/→** Scroll Image
 
-## File
 ---
+### File
 **DEL / ⌘⌫** Delete
 
 **L** Show in Finder
@@ -49,3 +48,5 @@
 **⇧⌘C** Copy to
 
 **⇧⌘M** Move to
+
+---
