@@ -35,8 +35,6 @@
 
 **F** Full Screen
 
-**B** Change Background Color
-
 **⌘↑/↓/←/→** Scroll Image
 
 ---
