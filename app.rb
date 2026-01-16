@@ -128,6 +128,13 @@ class MyApp < Sinatra::Base
     }
   end
 
+  get "/moliview/help-cn" do
+    markdown :"pages/moliview/help-cn", :layout_engine => :erb, :layout => :'layout-page', :locals => { 
+      :site_title => settings.site_title,
+      :title => "Help"
+    }
+  end
+
   get "/moliview/whatsnew" do
     markdown :"pages/moliview/whatsnew", :layout_engine => :erb, :layout => :'layout-page', :locals => { 
       :site_title => settings.site_title,
